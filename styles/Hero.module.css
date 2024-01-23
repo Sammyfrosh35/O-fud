@@ -1,0 +1,124 @@
+.container{
+    display:flex;
+    position: relative;
+}
+
+.left{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+}
+
+.cherrydiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    background-color: var(--pink);
+    margin-top: 3rem;
+    padding: 1rem;
+    border-radius: 2rem;
+    font-weight: bold;
+    font-size: 0.8rem;
+    color: var(--themeRed);
+}
+
+.pizzaText{
+    color: var(--themeRed);
+}
+
+.herotext{
+    flex-direction: column;
+    display: flex;
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+.smallText{
+    width: 70%;
+    color: var(--gray);
+    font-weight: 600;
+    
+}
+
+.btn{
+    padding: 1rem 2.5rem;
+    margin: 1rem;
+
+}
+
+.right{
+    position:relative;
+}
+
+.Imagecontainer{
+    width: 38rem;
+    position: absolute;
+    top: -5rem;
+    left: -5rem;
+
+}
+
+.contactus{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: max-content;
+    padding: 1rem;
+    border-radius: 5rem;
+    top: 6rem;
+    left: -6rem;
+    gap: 1rem;
+    background-color: white;
+    box-shadow: var(--shadow);
+    color: var(--themeRed);
+}
+
+.contactus>div{
+    background: rgb(59 208 59);
+     border-radius: 50%;
+     width: 2.5em;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     height: 2.5rem;
+}
+
+.contactus:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+.pizza{
+    display: flex;
+    gap: 1rem;
+    background-color: white;
+    box-shadow: var(--shadow);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    position: absolute;
+    bottom: 4rem;
+    left: 19rem;
+    width: max-content;
+}
+
+.pizza>:nth-child(1){
+    width: 6rem;
+    height: 4rem ;
+    overflow: hidden;
+    border-radius: .5rem;
+}
+
+.pizza>:nth-child(2){
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-weight: bold;
+    
+}
+
+.pizza:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+}
