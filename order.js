@@ -1,29 +1,51 @@
-import { client } from "../../lib/client";
-
-export default async function (req, res){
-    switch(req.method)
-    {
-        case "POST":
-            const newOrder = await JSON.parse(req.body);
-            try{
-                await client.create({
-                    _type: "order",
-                    name: newOrder.name,
-                    address: newOrder.address,
-                    phone: newOrder.phone,
-                    total: newOrder.total,
-                    method: newOrder.method,
-                    status: 1,
-                })
-                .then ((data)=>{
-                    res.status(200).json(data._id);
-                })
-            } catch (error) {
-                console.log(error);
-                res.status(500).json({msg: "error, check your console"})
+export default {
+    name: 'order',
+    title: 'Order',
+    type: 'document',
+    fields: [
+        {
+            name: 'name',
+            title: 'Name',
+            type: 'string',
+            Options: {
+                maxLength: 40
             }
-            break;
-                
-            
-    }
+        },
+        {
+            name: 'phone',
+            title: 'Phone',
+            type: 'string',
+            Options: {
+                maxLength: 15
+            }
+        },
+        {
+            name: 'address',
+            title: 'Address',
+            type: 'string',
+            Options: {
+                maxLength: 100
+            }
+        },
+        {
+            name: 'method',
+            title: 'Method',
+            type: 'number',
+        },
+        {
+            name: 'total',
+            title: 'Total',
+            type: 'number',
+        },
+        {
+            name: 'status',
+            title: 'Status',
+            type: 'number',
+        },
+    ]
+    
+
+    
+
+  
 }
