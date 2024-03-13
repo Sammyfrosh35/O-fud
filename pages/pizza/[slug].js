@@ -7,7 +7,7 @@ const pizza = ({ pizza }) => {
     console.log(pizza);
 
   return 
-    <Layout>pizza page</Layout>;
+    <Layout> pizza ordering page</Layout>;
  
  
 };
